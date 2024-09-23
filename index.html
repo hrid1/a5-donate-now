@@ -15,7 +15,7 @@
   <body>
     <!-- header section start -->
     <header class="pb-2 sticky top-0 backdrop-blur-md "">
-      <div class="navbar container mx-auto md:px-6 py-4 bg-teal-100 bg-opacity-60 backdrop-blur-md">
+      <div class="navbar mx-auto md:px-6 py-4 bg-teal-100 bg-opacity-60 backdrop-blur-md">
         <div class="navbar-start">
           <a href="./blog.html">
             <button class="btn bg-teal-300 md:px-6 md:font-bold">Blog</button>
@@ -50,9 +50,9 @@
         >
           <!-- pic -->
 
-          <div class="md:w-1/2">
+          <div class="md:w-1/2 h-60 md:h-[400px] ">
             <img
-              class="w-full h-60 md:h-auto"
+              class="w-full h-full object-cover rounded-md"
               src="./assets/feni.png"
               alt="feni"
             />
@@ -247,10 +247,10 @@
         <!-- <p class="py-4">Press ESC key or click the button below </p> -->
 
         <div class="modal-action flex justify-center">
-          <form method="dialog text-center mx-auto">
-            <!-- if there is a button in form, it will close the modal -->
-            <button class="btn">Close confirmation</button>
-          </form>
+          <div method="dialog text-center mx-auto">
+            <!-- if there is a button in div, it will close the modal -->
+            <button id="closeModalBtn"  class="btn">Close confirmation</button>
+          </div>
         </div>
       </div>
     </dialog>

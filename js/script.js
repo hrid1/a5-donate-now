@@ -65,7 +65,17 @@ const handleDonation = (amountId, accountId, titleId) => {
     // Update Main Balance
     setElement("main-balance", totalBalance - donationAmount);
 
+    // Update History Section
     updateHistory(donationAmount, donationTitle);
+
+    // modal open and close
+    const modal = document.getElementById("my_modal");
+    modal.showModal();
+
+    const closeModalBtn = document.getElementById("closeModalBtn");
+    closeModalBtn.addEventListener("click", () => {
+      modal.close(); 
+    });
   }
 };
 
