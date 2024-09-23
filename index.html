@@ -27,7 +27,7 @@
         </div>
         <div class="navbar-end md:gap-2">
           <img class="w-6 md:w-auto" src="./assets/coin.png" alt="" />
-          <p class="text-sm md:text-xl font-semibold"><span>42300</span> BDT</p>
+          <p class="text-sm md:text-xl font-semibold"><span id="main-balance">5000</span> BDT</p>
         </div>
       </div>
 
@@ -58,19 +58,12 @@
             />
           </div>
 
-          <!-- <div class="md:w-1/2 border">
-            <img
-              class=""
-              src="./assets/feni.png"
-              alt="feni"
-            />
-          </div> -->
           <!-- info -->
           <div class="md:w-1/2 flex flex-col justify-between">
             <div>
               <button class="btn">
                 <img src="./assets/coin.png" alt="" />
-                1200
+               <span id="feni-account">1000</span>
               </button>
               <h4 class="text-xl font-semibold my-4">
                 Donate For Flood At NoaKhali Bangladesh
@@ -89,12 +82,13 @@
             </div>
             <div class="space-y-4">
               <input
+                id="for-feni"
                 class="w-full p-3 border rounded-md"
                 type="text"
                 placeholder="Write donation amount"
               />
 
-              <button class="btn bg-teal-300 w-full">Donate Now</button>
+              <button onclick="handleDonation('for-feni', 'feni-account')" class="btn bg-teal-300 w-full">Donate Now</button>
             </div>
           </div>
         </div>
@@ -266,5 +260,7 @@
         </div>
       </div>
     </dialog>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
