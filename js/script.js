@@ -16,12 +16,43 @@ const setElement = (elementId, value) => {
   element.innerText = value;
 };
 
-// -----------------------Handle Amount-----------------------
+const updateHistory = (amount, title) => {
+  const currentDate = new Date();
 
-const handleDonation = (amountId, accountId) => {
+  // For Title
+  const titleWord = title.split(" ");
+  titleWord.shift();
+  const newTitle = titleWord.join(" ");
+
+  const historyDiv = document.getElementById("history-section");
+
+  // create a new Div
+  const donateDiv = document.createElement("div");
+  donateDiv.classList.add("md:p-5", "p-2", "border", "shadow", "rounded");
+
+  donateDiv.innerHTML = `
+  
+          <h3 class="text-xl font-semibold">
+            ${amount} Taka is Donated ${newTitle}
+          </h3>
+          <p>
+           ${currentDate}
+          </p>
+
+  `;
+
+  historyDiv.appendChild(donateDiv);
+};
+
+// ----------------------Handle Amount-----------------------
+
+const handleDonation = (amountId, accountId, titleId) => {
   const donationAmount = getInputElement(amountId);
   const totalBalance = getElement("main-balance");
   const feniAccount = getElement(accountId);
+  const donationTitle = document.getElementById(titleId).innerText;
+
+  //   console.log(donationTitle);
 
   console.log(donationAmount, totalBalance, feniAccount);
 
@@ -33,5 +64,35 @@ const handleDonation = (amountId, accountId) => {
     setElement(accountId, feniAccount + donationAmount);
     // Update Main Balance
     setElement("main-balance", totalBalance - donationAmount);
+
+    updateHistory(donationAmount, donationTitle);
   }
 };
+
+// ---------------TOOGLE Donation and History----------------
+
+const toggleBtn = () => {
+  const donationDiv = document.getElementById("donation-section");
+  const historyDiv = document.getElementById("history-section");
+  const donationBtn = document.getElementById("donation-btn");
+  const historyBtn = document.getElementById("history-btn");
+
+  //   for donation
+  document.getElementById("donation-btn").addEventListener("click", () => {
+    donationDiv.classList.remove("hidden");
+    donationBtn.classList.add("bg-teal-300");
+    historyDiv.classList.add("hidden");
+    historyBtn.classList.remove("bg-teal-300");
+  });
+
+  //   for History
+
+  document.getElementById("history-btn").addEventListener("click", () => {
+    historyDiv.classList.remove("hidden");
+    historyBtn.classList.add("bg-teal-300");
+    donationDiv.classList.add("hidden");
+    donationBtn.classList.remove("bg-teal-300");
+  });
+};
+
+toggleBtn();

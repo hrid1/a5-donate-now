@@ -32,8 +32,8 @@
       </div>
 
       <section class="text-center my-5 space-x-4">
-        <button class="btn bg-teal-300">Donation</button>
-        <button class="btn">History</button>
+        <button id="donation-btn" class="btn bg-teal-300">Donation</button>
+        <button id="history-btn" class="btn">History</button>
       </section>
     </header>
     <!-- header sectind end -->
@@ -65,8 +65,8 @@
                 <img src="./assets/coin.png" alt="" />
                <span id="feni-account">1000</span>
               </button>
-              <h4 class="text-xl font-semibold my-4">
-                Donate For Flood At NoaKhali Bangladesh
+              <h4 id="feni" class="text-xl font-semibold my-4">
+                Donate For Flood At Feni Bangladesh
               </h4>
               <p>
                 Feni is a district in southeastern Bangladesh, also suffers from
@@ -88,7 +88,7 @@
                 placeholder="Write donation amount"
               />
 
-              <button onclick="handleDonation('for-feni', 'feni-account')" class="btn bg-teal-300 w-full">Donate Now</button>
+              <button onclick="handleDonation('for-feni', 'feni-account', 'feni')" class="btn bg-teal-300 w-full">Donate Now</button>
             </div>
           </div>
         </div>
@@ -106,13 +106,7 @@
             />
           </div>
 
-          <!-- <div class="md:w-1/2 border">
-            <img
-              class=""
-              src="./assets/feni.png"
-              alt="feni"
-            />
-          </div> -->
+         
           <!-- info -->
           <div class="md:w-1/2 flex flex-col justify-between">
             <div>
@@ -205,12 +199,12 @@
 
       <!--------------------------- blog section ------------------->
       <section
-        id="blog-section"
+        id="history-section"
         class="md:w-10/12 mx-auto p-4 space-y-4 hidden"
       >
         <div class="md:p-5 p-2 border shadow rounded">
           <h3 class="text-xl font-semibold">
-            121334 Taka is Donate Feni , Bangladesh
+            6500 Taka is Donated for Flood Relief in Feni,Bangladesh
           </h3>
           <p>
             Time Lorem ipsum dolor sit amet, consectetur adipiamet, consectetur
