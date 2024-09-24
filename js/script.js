@@ -1,22 +1,22 @@
-const getInputElement = (eLementId) => {
+function getInputElement(eLementId) {
   const input = document.getElementById(eLementId);
   const elementValue = parseInt(input.value);
   input.value = "";
   return elementValue;
-};
+}
 
-const getElement = (elementId) => {
+function getElement(elementId) {
   const element = document.getElementById(elementId);
   const elementValue = parseInt(element.innerText);
   return elementValue;
-};
+}
 
-const setElement = (elementId, value) => {
+function setElement(elementId, value) {
   const element = document.getElementById(elementId);
   element.innerText = value;
-};
+}
 
-const updateHistory = (amount, title) => {
+function updateHistory(amount, title) {
   const currentDate = new Date();
 
   // For Title
@@ -42,11 +42,11 @@ const updateHistory = (amount, title) => {
   `;
 
   historyDiv.appendChild(donateDiv);
-};
+}
 
 // ----------------------Handle Amount-----------------------
 
-const handleDonation = (amountId, accountId, titleId) => {
+function handleDonation(amountId, accountId, titleId) {
   const donationAmount = getInputElement(amountId);
   const totalBalance = getElement("main-balance");
   const feniAccount = getElement(accountId);
@@ -74,14 +74,14 @@ const handleDonation = (amountId, accountId, titleId) => {
 
     const closeModalBtn = document.getElementById("closeModalBtn");
     closeModalBtn.addEventListener("click", () => {
-      modal.close(); 
+      modal.close();
     });
   }
-};
+}
 
 // ---------------TOOGLE Donation and History----------------
 
-const toggleBtn = () => {
+function toggleBtn ()  {
   const donationDiv = document.getElementById("donation-section");
   const historyDiv = document.getElementById("history-section");
   const donationBtn = document.getElementById("donation-btn");

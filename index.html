@@ -32,8 +32,8 @@
       </div>
 
       <section class="text-center my-5 space-x-4">
-        <button id="donation-btn" class="btn bg-teal-300">Donation</button>
-        <button id="history-btn" class="btn">History</button>
+        <button id="donation-btn" class="btn bg-teal-300 border-gray-500">Donation</button>
+        <button id="history-btn" class="btn border border-gray-500">History</button>
       </section>
     </header>
     <!-- header sectind end -->
@@ -98,11 +98,11 @@
         >
           <!-- pic -->
 
-          <div class="md:w-1/2">
+          <div class="md:w-1/2 h-60 md:h-[400px]">
             <img
-              class="w-full h-60 md:h-auto"
+              class="w-full h-full object-cover rounded-md"
               src="./assets/noakhali.png"
-              alt="feni"
+              alt="noakhali"
             />
           </div>
 
@@ -112,9 +112,9 @@
             <div>
               <button class="btn">
                 <img src="./assets/coin.png" alt="" />
-                1200
+                <span id="noakhali-account">1200</span>
               </button>
-              <h4 class="text-xl font-semibold my-4">
+              <h4 id="noakhali" class="text-xl font-semibold my-4">
                 Donate For Flood At NoaKhali Bangladesh
               </h4>
               <p>
@@ -132,66 +132,64 @@
             </div>
             <div class="space-y-4">
               <input
+                id="for-noakhali"
                 class="w-full p-3 border rounded-md"
                 type="text"
                 placeholder="Write donation amount"
               />
 
-              <button class="btn bg-teal-300 w-full">Donate Now</button>
+              <button onclick="handleDonation('for-noakhali', 'noakhali-account', 'noakhali')" class="btn bg-teal-300 w-full">Donate Now</button>
             </div>
           </div>
         </div>
-        <!-- card-1 -->
+        <!-- card-3 -->
         <div
           class="border w-11/12 mx-auto md:p-6 p-2 rounded-xl shadow-sm flex flex-col md:flex-row justify-around gap-6"
         >
           <!-- pic -->
 
-          <div class="md:w-1/2">
+          <div class="md:w-1/2 h-60 md:h-[400px]">
             <img
-              class="w-full h-60 md:h-auto"
+              class="w-full h-full object-cover rounded-md"
               src="./assets/quota-protest.png"
-              alt="feni"
+              alt="quota"
             />
           </div>
 
-          <!-- <div class="md:w-1/2 border">
-            <img
-              class=""
-              src="./assets/feni.png"
-              alt="feni"
-            />
-          </div> -->
+        
           <!-- info -->
           <div class="md:w-1/2 flex flex-col justify-between">
             <div>
               <button class="btn">
                 <img src="./assets/coin.png" alt="" />
-                1200
+                <span id="quota-account">1500</span>
               </button>
-              <h4 class="text-xl font-semibold my-4">
-                Donate For Flood At NoaKhali Bangladesh
+              <h4 id="quota" class="text-xl font-semibold my-4">
+                
+                Donate For Injured in Quota movement 
               </h4>
               <p>
-                Feni, another district in southeastern Bangladesh, also suffers
-                from recurrent flooding. The Feni River, combined with monsoon
-                downpours, often overflows its banks, flooding vast areas of
-                agricultural land and homes. These floods not only damage crops
-                but also affect transportation and communication in the region.
-                Local authorities and NGOs work together to provide immediate
-                relief, though infrastructure improvements like better water
-                management systems and embankments are necessary for long-term
-                flood mitigation.
+                The quota movement in Bangladesh became a significant political
+                issue in 2018, as students across the country protested against
+                the government’s reservation system in public jobs. The movement
+                gained widespread support, especially from university students,
+                who argued that the quota system was unfair and hindered
+                merit-based recruitment. The protests led to violent clashes
+                with police, which escalated the situation. Eventually, the
+                government agreed to review and reform the quota system,
+                reducing the percentage of reserved jobs and addressing the
+                concerns of the protesters.
               </p>
             </div>
             <div class="space-y-4">
               <input
+                id="for-quota"
                 class="w-full p-3 border rounded-md"
                 type="text"
                 placeholder="Write donation amount"
               />
 
-              <button class="btn bg-teal-300 w-full">Donate Now</button>
+              <button onclick="handleDonation('for-quota', 'quota-account', 'quota')" class="btn bg-teal-300 w-full">Donate Now</button>
             </div>
           </div>
         </div>
@@ -204,31 +202,14 @@
       >
         <div class="md:p-5 p-2 border shadow rounded">
           <h3 class="text-xl font-semibold">
-            6500 Taka is Donated for Flood Relief in Feni,Bangladesh
+            500 Taka is Donated For Flood At NoaKhali Bangladesh
           </h3>
           <p>
-            Time Lorem ipsum dolor sit amet, consectetur adipiamet, consectetur
-            adipi sicing elit.
+            Tue Sep 24 2024 13:43:51 GMT+0600 (Bangladesh Standard Time)
           </p>
         </div>
-        <div class="md:p-5 p-2 border shadow rounded">
-          <h3 class="text-xl font-semibold">
-            121334 Taka is Donate Feni , Bangladesh
-          </h3>
-          <p>
-            Time Lorem ipsum dolor sit amet, consectetur adipiamet, consectetur
-            adipi sicing elit.
-          </p>
-        </div>
-        <div class="md:p-5 p-2 border shadow rounded">
-          <h3 class="text-xl font-semibold">
-            121334 Taka is Donate Feni , Bangladesh
-          </h3>
-          <p>
-            Time Lorem ipsum dolor sit amet, consectetur adipiamet, consectetur
-            adipi sicing elit.
-          </p>
-        </div>
+       
+       
       </section>
     </main>
     <!-- main section end-->
@@ -236,7 +217,7 @@
     <!-- modal code -->
 
     <!-- Open the modal using ID.showModal() method -->
-    <button class="btn" onclick="my_modal.showModal()">open modal</button>
+  
 
     <dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
       <div class="modal-box text-center space-y-4">
