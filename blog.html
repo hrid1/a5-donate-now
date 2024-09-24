@@ -39,32 +39,53 @@
        
         <h3 class="text-4xl font-bold text-center my-6">Important FAQ</h3>
         <section  class="px-4 md:w-5/6 mx-auto space-y-4 ">
-            <div class="collapse collapse-plus bg-base-200">
-                <input type="radio" name="my-accordion-3" checked="checked" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+           
+              <div class="collapse collapse-plus bg-base-200">
+                <input type="radio" name="my-accordion-3" checked="checked"/>
+                <div class="collapse-title text-xl font-medium">What is the DOM(Document Object Model)?</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>The DOM is like a tree structure of a webpage. It represents all the HTML elements (like headings, paragraphs, buttons) as objects. We can change this by using JS.</p>
                 </div>
               </div>
               <div class="collapse collapse-plus bg-base-200">
                 <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>We can use JavaScript to pick an element from the webpage:
+                    <br>
+                    1.document.getElementById('elementId')
+                    <br>
+                    3.document.getElementsByClassName('className')
+                    <br>
+                    2.document.querySelector('#elementId')
+                    <br>
+                    4.document.querySelectorAll('.className')
+                  </p>
                 </div>
               </div>
               <div class="collapse collapse-plus bg-base-200">
                 <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-title text-xl font-medium"> What is event delegation and why is it useful? </div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>Event delegation means putting an event listener on a parent element. The parent handles clicks for all the child elements inside it.
+                    
+                   <p>
+                    This is useful because it allows you to handle events for multiple child elements without having to attach individual event listeners to each one.
+                   </p>
+                  </p>
                 </div>
               </div>
+
               <div class="collapse collapse-plus bg-base-200">
-                <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <input type="radio" name="my-accordion-3"  />
+                <div class="collapse-title text-xl font-medium">How do you change an element’s attributes and styles?
+                </div>
                 <div class="collapse-content">
-                  <p>hello</p>
+                  <p>
+                   <p>To change an attribute : element.setAttribute('attributeName', 'newValue'); </p>
+                   <p>To change a style :  element.style.color = 'green'; 
+                  </p>
+                  </p>
                 </div>
               </div>
         </section>
